@@ -1,20 +1,18 @@
 input.onButtonPressed(Button.A, function () {
-    music.playMelody("D E D E C C - D ", 120)
-    music.playMelody("C C C - - - - - ", 120)
-    a()
+    music.stopAllSounds()
 })
 function a () {
     basic.showString("merry Xmas")
 }
+input.onButtonPressed(Button.AB, function () {
+	
+})
 input.onButtonPressed(Button.B, function () {
-    music.playMelody("C5 C5 B C5 B B A A ", 120)
-    basic.pause(200)
-    music.playMelody("B C5 B B A A G G ", 137)
-    basic.pause(200)
-    music.playMelody("B C5 B B A A G G ", 137)
-    basic.pause(200)
+    music.playMelody("B B B - B B B - ", 120)
+    music.playMelody("B C5 A C5 C5 - - - ", 137)
+    music.playMelody("C5 C5 C5 - C5 C5 B B ", 137)
     music.playMelody("F F G A G F F - ", 137)
-    a()
+    music.playSoundEffect(music.createSoundEffect(WaveShape.Square, 1048, 1, 2, 141, 500, SoundExpressionEffect.None, InterpolationCurve.Curve), SoundExpressionPlayMode.UntilDone)
 })
 basic.forever(function () {
     basic.showLeds(`
